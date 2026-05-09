@@ -1,0 +1,424 @@
+:root {
+    --primary: #6366f1;
+    --secondary: #8b5cf6;
+    --bg: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== RESET: ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: var(--bg);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* =========================
+   NAVBAR (PART 2 THEME)
+========================= */
+
+/* ===== PREMIUM NAVBAR STYLE ===== */
+
+.navbar {
+    background: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+/* Logo */
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff !important;
+    transition: 0.3s ease;
+    color: #cbd5e1 !important;
+}
+
+.navbar-brand img {
+
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* Nav Links */
+.nav-link {
+    position: relative;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    color: #cbd5e1 !important;
+}
+
+/* Hover effect underline animation */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active/Highlighted link */
+.nav-link.text-warning {
+    color: #facc15 !important;
+    font-weight: 600;
+}
+
+/* Navbar shadow on scroll feel */
+.navbar.scrolled {
+    background: rgba(15, 23, 42, 0.95) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+/* ===== HERO SECTION ===== */
+/* Header ko flexbox banayein taake dono cheezein corners par chali jayein */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    /* Logo left par, image right par */
+    align-items: center;
+    /* Vertical alignment center karne ke liye */
+    padding: 20px 5%;
+    /* Side se thori space dene ke liye */
+    background-color: #0f172a;
+    /* Jo aapki background ka color hai */
+}
+
+/* Logo ka size control karne ke liye */
+.logo-area img {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Right side wali image ka size */
+.header-right-img img {
+    max-width: 400px;
+    /* Iska size aap apne mutabiq set kar sakte hain */
+    height: auto;
+    /* Agar image ko thora adjust karna ho */
+    object-fit: contain;
+}
+
+/* Mobile par layout theek karne ke liye */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-right-img img {
+        margin-top: 20px;
+        max-width: 80%;
+    }
+}
+
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at top left, #1e293b, #0f172a);
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+/* Soft glowing effect background */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(99, 102, 241, 0.3);
+    filter: blur(120px);
+    top: -100px;
+    left: -100px;
+    border-radius: 50%;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(139, 92, 246, 0.25);
+    filter: blur(120px);
+    bottom: -80px;
+    right: -80px;
+    border-radius: 50%;
+}
+
+/* Container text */
+.hero-section h1 {
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    max-width: 500px;
+    animation: fadeInUp 1.2s ease;
+}
+
+/* Image styling */
+.hero-section img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 1.4s ease;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7);
+}
+
+/* Button (agar add karo future mein) */
+.hero-section .btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    transition: 0.3s;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(214, 143, 10, 0.3);
+}
+
+.card img,
+.card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.card-text {
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-custom {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border: none;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid var(--border);
+    color: #94a3b8;
+}
+
+footer span {
+    color: var(--primary);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* =======================================
+   PART 1 RESPONSIVE QUERIES ADDED
+======================================= */
+
+/* Small Mobile → 1 card */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar a {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .card {
+        font-size: 13px;
+    }
+
+    .card img,
+    .card-img-top {
+        height: 130px;
+    }
+
+    .btn-custom {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 20px 10px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile → 2 cards per row */
+@media (min-width: 481px) and (max-width: 767px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 0.95rem;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar a {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .card {
+        font-size: 13px;
+    }
+
+    .card img,
+    .card-img-top {
+        height: 140px;
+    }
+
+    .btn-custom {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}

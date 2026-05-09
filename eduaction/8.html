@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH.EDUCATION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+</head>
+
+<link rel="stylesheet" href="1.css">
+
+<body>
+    <nav class="navbar navbar-dark bg-dark px-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="c:\Users\MirzaPC\Downloads\ChatGPT Image May 2, 2026, 12_50_09 AM.png" alt="Tech Education"
+                    width="50" height="50" class="me-2">
+                TECH.<span class="text-primary">EDUCATION</span>
+            </a>
+
+            <!-- Menu -->
+            <div class="d-flex">
+                <a href="#" class="nav-link text-white" onclick="init(111)">Home</a>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- 🔥 Header / Hero Section -->
+    <header class="hero-section text-white d-flex align-items-center">
+        <div class="container text-start">
+            <h1 class="display-4 fw-bold">TECH.<span class="text-primary">EDUCATION</span></h1>
+            <p class="lead">Bridging the gap between theory and practical code.</p><img
+                src="c:\Users\MirzaPC\Downloads\ChatGPT Image May 2, 2026, 12_50_09 AM.png"
+                alt="students collaborating on coding project in tech education setting" class="img-fluid rounded mt-4">
+        </div>
+    </header><br> <br>
+
+    <main class="container mb-5">
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400"
+                        class="card-img-top" alt="Code">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-uppercase">OBJECT oriented programing</h5>
+                        <p class="card-text text-muted small">object oriented programing c++</p>
+                        <button class="btn btn-custom mt-auto" onclick="init(1)">View Course</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400"
+                        class="card-img-top" alt="Code">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-uppercase">object oriented programing : NOTES</h5>
+                        <p class="card-text text-muted small">object oriented programing : NOTEs</p>
+                        <button class="btn btn-custom mt-auto" onclick="init(2)">View Course</button>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>This website is for educational purposes only.</p>
+        <p class="mb-0">&copy; 2026 Object Oriented Programming Courses. All rights reserved.</p>
+        <p>Quorum binaries</p>
+        <p>This website Designed by<span> REHAN [QUROUM BINARIES]</span></p>
+    </footer>
+
+
+    <script>
+        function init(lectureNumber) {
+            const filePaths = {
+                1: "https://drive.google.com/file/d/12FvlI1ZuHxwzG1tjYIuwpEo40xpPURRN/view?usp=sharing",
+                2: "https://drive.google.com/file/d/17K-bctduM5QGdZXvmXzpZuUodKLZLau4/view?usp=sharing",
+                111: "1.html",
+
+
+
+            };
+
+            const filePath = filePaths[lectureNumber];
+            if (filePath) {
+                window.open(filePath);
+            } else {
+                console.error("Invalid lecture number:", lectureNumber);
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
